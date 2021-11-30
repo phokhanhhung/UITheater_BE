@@ -1,15 +1,45 @@
-const express = require('express');
-const {sql, conn} = require('./db');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+'use strict';
+var express = require('express');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var ejs = require('ejs');
+var engine = require('ejs-mate');
+var session = require('express-session');
+var mongoose = require('mongoose');
+var MongoStore = require('connect-mongo')(session);
+var passport = require('passport');
+var flash = require('connect-flash');
 
-const app = express();
+var app = express();
 
-app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
+mongoose.connect('mongodb://localhost/baith1')
+
+require('./config/passport');
+
+app.use(express.static('public'));
+
+app.engine('ejs', engine);
+app.set('view engine', 'ejs');
+app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const PORT = 5000;
-app.listen(() => {
-  console.log(`server stared on port ${PORT}`);
+app.use(session({
+  secret: 'Thisismytestkey',
+  resave: false,
+  saveUninitialized: false,
+  store: new MongoStore({mongooseConnection: mongoose.connection})
+}));
+
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session);
+
+require('./routes/user')(app);
+
+app.listen('3000', function () {
+  console.log('Listening on port 3000!');
 });
+
+
+

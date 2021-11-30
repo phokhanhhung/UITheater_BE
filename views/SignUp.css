@@ -1,0 +1,148 @@
+.signUpWrap {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.signUp {
+  width: 900px;
+  height:675px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #201546;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
+.signUp button {
+  cursor: pointer;
+}
+
+.signUp  img {
+  object-fit: contain;
+  width: 50%;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.signUp_form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  padding: 0 50px;
+}
+
+.signUp_form > i {
+  width: 25px;
+  height: 25px;
+  font-size: 25px;
+  color: #463E6A;
+  align-self: flex-end;
+  margin: 15px -15px 0 0;
+  cursor: pointer;
+}
+
+.signUp_form > img {
+  margin-top: -60px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.signUp_form > h1 {
+  color: #C0556F;
+  font-size: 25px;
+}
+
+.signUp_form > input {
+  width: 350px;
+  height: 45px;
+  padding: 10px;
+  border: 1px solid #463E6A;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #67A3AA;
+}
+
+.signUp_form > input::placeholder {
+  color: #67A3AA;
+}
+
+.signUp_form .signUp_password {
+  position: relative;
+}
+
+.signUp_form .signUp_check {
+  display: flex;
+  align-self: flex-start;
+  margin-top: -10px;
+}
+
+.signUp_form .signUp_check input {
+  width: 15px;
+  height: 15px;
+  margin: 2px 2px 0 0;
+}
+
+.signUp_form .signUp_check label {
+  padding-left: 2px;
+  color: #67A3AA;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.signUp_form .signUp_check label a {
+  color: #fff;
+}
+
+.signUp_form > button {
+  width: 180px;
+  height: 45px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #67A3AA;
+  border: none;
+  border-radius: 30px;
+}
+
+.signUp_form .signUp_toSignUp {
+  margin-top: 10px;
+}
+
+.signUp_form .signUp_toSignUp > span {
+  font-size: 14px;
+  font-style: italic;
+  color: #C0556F;
+}
+
+.signUp_form .signUp_toSignUp > button {
+  width: 80px;
+  height: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  background-color: #C0556F;
+  margin-left: 8px;;
+}
+
+.signUp_form .triangle {
+  position: absolute;
+  top: 60px;
+  left: -57px;
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-right:66px solid #201546;
+}
