@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const PORT = 5000;
+const PORT = 8000;
 app.listen(PORT, () => {
   console.log(`server stared on port ${PORT}`);
 });
