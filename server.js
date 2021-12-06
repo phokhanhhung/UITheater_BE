@@ -33,9 +33,9 @@ app.use(session({
 
 app.use(flash());
 app.use(passport.initialize());
-app.use(passport.session);
+app.use(passport.session());
 
-require('./routes/user')(app);
+require('./routes/user')(app, passport);
 
 // app.listen('3000', function () {
 //   console.log('Listening on port 3000!');

@@ -20,6 +20,7 @@
     "ejs-mate": "^2.3.0",
     "express": "^4.14.1",
     "express-session": "^1.15.6",
+    "express-validator": "^3.1.2",
     "mongoose": "^4.8.0",
     "msnodesqlv8": "^2.4.3",
     "mssql": "^7.3.0",

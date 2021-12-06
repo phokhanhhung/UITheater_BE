@@ -1,1 +1,38 @@
 <% layout('layout') %>
+
+<div className="signInWrap">
+    <div className="signIn">
+
+      <img src="images/SignInImg.png" alt="Movie Time" />
+
+      <div className="signIn_form">
+        <div className="triangle"></div>
+        <i className="fas fa-times-circle"></i><br />
+        <img src="images/logo.png" alt="Logo" />
+        <h1>ĐĂNG NHẬP</h1>
+        <input type="email" placeholder="Email hoặc số điện thoại" />
+        <div className="signIn_password">
+          <input type="password" placeholder="Mật khẩu" />
+        </div>
+        <div className="signIn_check">
+          <input type="checkbox" name="remember" />
+          <label htmlFor="remember">Ghi nhớ</label>
+        </div>
+        <button>Đăng nhập</button>
+        <a href="#">Quên mật khẩu?</a>
+        <div className="signIn_method">
+          <span className="line"></span>
+          <span>Bạn có thể đăng nhập bằng</span>
+          <span className="line"></span>
+        </div>
+        <div className="signIn_media">
+          <img src="images/SignIn_fb.png" alt="facebook" />
+          <img src="images/SignIn_gg+.png" alt="google" />
+        </div>
+        <div className="signIn_toSignUp">
+          <span>Chưa có tài khoản?</span>
+          <button>Đăng kí</button>
+        </div>
+      </div>
+    </div>
+  </div>
